@@ -1,13 +1,17 @@
-import javax.xml.transform.Result;
+package ch1;
+
 import java.sql.*;
 
-public class UserDao {
+public class UserDao{
+
+    private ConnectionMarker connectionMarker;
+
+    public UserDao(ConnectionMarker connectionMarker) {
+        this.connectionMarker = connectionMarker;
+    }
 
     public void add(User user) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection c = DriverManager.getConnection(
-                "jdbc:mysql://localhost/toby_spring","root","qwer12345"
-        );
+        Connection c = connectionMarker.makeConnection();
         PreparedStatement ps = c.prepareStatement("insert into users(id,name,password) values(?,?,?)");
         ps.setString(1,user.getId());
         ps.setString(2,user.getName());
@@ -17,10 +21,7 @@ public class UserDao {
         c.close();
     }
     public User get(String id) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection c = DriverManager.getConnection(
-                "jdbc:mysql://localhost/toby_spring","root","qwer12345"
-        );
+        Connection c = connectionMarker.makeConnection();
         PreparedStatement ps = c.prepareStatement("select * from users where id = ?");
         ps.setString(1,id);
         ResultSet rs = ps.executeQuery();
@@ -34,4 +35,11 @@ public class UserDao {
         c.close();
         return user;
     }
+//    private  Connection getConnection() throws ClassNotFoundException, SQLException {
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//        Connection c = DriverManager.getConnection(
+//                "jdbc:mysql://localhost/toby_spring","root","qwer12345"
+//        );
+//        return c;
+//    }
 }

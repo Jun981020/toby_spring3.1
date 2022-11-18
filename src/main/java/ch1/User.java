@@ -1,3 +1,5 @@
+package ch1;
+
 public class User {
     String id;
     String name;
@@ -8,7 +10,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "ch1.User{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
