@@ -6,7 +6,10 @@ public class UserDao{
 
     private ConnectionMarker connectionMarker;
 
-    public UserDao(ConnectionMarker connectionMarker) {
+//    public UserDao(ConnectionMarker connectionMarker) {
+//        this.connectionMarker = connectionMarker;
+//    }
+    public void setConnectionMaker(ConnectionMarker connectionMarker){
         this.connectionMarker = connectionMarker;
     }
 
