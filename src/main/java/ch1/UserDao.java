@@ -12,6 +12,12 @@ public class UserDao{
     public void setConnectionMaker(ConnectionMarker connectionMarker){
         this.connectionMarker = connectionMarker;
     }
+    
+    public void deleteAll() throws SQLException, ClassNotFoundException {
+        Connection c = connectionMarker.makeConnection();
+        PreparedStatement ps = c.prepareStatement("delete from user");
+        ps.executeUpdate();
+    }
 
     public void add(User user) throws ClassNotFoundException, SQLException {
         Connection c = connectionMarker.makeConnection();

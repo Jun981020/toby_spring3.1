@@ -3,6 +3,8 @@ package ch1;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class UserDaoTest {
@@ -51,26 +53,27 @@ public class UserDaoTest {
 //        System.out.println("userDao1 = " + userDao1);//서로같은 객체 싱글톤 보장
 
         //CountingConnectionMaker 사용
-        AnnotationConfigApplicationContext ac =
-                new AnnotationConfigApplicationContext(CountingDaoFactory.class);
-        UserDao userDao = ac.getBean("userDao", UserDao.class);
-        User user1 = new User("1","jun","1234");
-        User user2 = new User("2","jun","1234");
-        User user3 = new User("3","jun","1234");
-        userDao.add(user1);
-        userDao.add(user2);
-        userDao.add(user3);
-        User user = userDao.get("1");
-        User user4 = userDao.get("2");
-        User user5 = userDao.get("3");
-        System.out.println("user = " + user);
-        System.out.println("user4 = " + user4);
-        System.out.println("user5 = " + user5);
+//        AnnotationConfigApplicationContext ac =
+//                new AnnotationConfigApplicationContext(CountingDaoFactory.class);
+//        UserDao userDao = ac.getBean("userDao", UserDao.class);
+//        User user1 = new User("1","jun","1234");
+//        User user2 = new User("2","jun","1234");
+//        User user3 = new User("3","jun","1234");
+//        userDao.add(user1);
+//        userDao.add(user2);
+//        userDao.add(user3);
+//        User user = userDao.get("1");
+//        User user4 = userDao.get("2");
+//        User user5 = userDao.get("3");
+//        System.out.println("user = " + user);
+//        System.out.println("user4 = " + user4);
+//        System.out.println("user5 = " + user5);
+//        CountingConnectionMaker ccm = ac.getBean("connectionMarker", CountingConnectionMaker.class);
+//        System.out.println(ccm.getCount());
 
 
+        //jdbc 템플릿
 
-        CountingConnectionMaker ccm = ac.getBean("connectionMarker", CountingConnectionMaker.class);
-        System.out.println(ccm.getCount());
 
 
     }

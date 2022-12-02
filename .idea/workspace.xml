@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="p.143 (ch1 clear)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoConnectionCountingTest.java" afterDir="false" />
+    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="p.150 setter 주입,&#10;단위테스트">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/CountingDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/CountingDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -61,6 +62,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/Users/ijunhyeong/IdeaProjects/toby_spring3.1/build.gradle",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -71,6 +74,12 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ch1" />
     </key>
   </component>
   <component name="RunManager" selected="Application.UserDaoConnectionCountingTest">
@@ -159,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669289166723</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="p.150 setter 주입,&#10;단위테스트">
+      <created>1669819297739</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669819297739</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,7 +195,8 @@
     <MESSAGE value="p.100" />
     <MESSAGE value="p.121" />
     <MESSAGE value="p.143 (ch1 clear)" />
-    <option name="LAST_COMMIT_MESSAGE" value="p.143 (ch1 clear)" />
+    <MESSAGE value="p.150 setter 주입,&#10;단위테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="p.150 setter 주입,&#10;단위테스트" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
