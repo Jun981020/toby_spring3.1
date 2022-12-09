@@ -8,9 +8,7 @@ public class CountingDaoFactory {
 
     @Bean
     public UserDao userDao(){
-        UserDao userDao = new UserDao();
-        userDao.setConnectionMaker(connectionMaker());
-        return userDao;
+        return new UserDao(connectionMaker());
 
     }
     @Bean
