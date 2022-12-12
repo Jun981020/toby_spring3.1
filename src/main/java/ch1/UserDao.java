@@ -1,5 +1,7 @@
 package ch1;
 
+import org.springframework.dao.EmptyResultDataAccessException;
+
 import java.sql.*;
 
 public class UserDao{
@@ -12,10 +14,21 @@ public class UserDao{
 //    public void setConnectionMaker(ConnectionMarker connectionMarker){
 //        this.connectionMarker = connectionMarker;
 //    }
+    public int getCount() throws SQLException, ClassNotFoundException {
+        Connection c = connectionMarker.makeConnection();
+        PreparedStatement ps = c.prepareStatement("select count(*) from users");
+        ResultSet rs = ps.executeQuery();
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        ps.close();
+        c.close();
+        return count;
+    }
     
     public void deleteAll() throws SQLException, ClassNotFoundException {
         Connection c = connectionMarker.makeConnection();
-        PreparedStatement ps = c.prepareStatement("delete from user");
+        PreparedStatement ps = c.prepareStatement("delete from users");
         ps.executeUpdate();
     }
 
@@ -34,14 +47,19 @@ public class UserDao{
         PreparedStatement ps = c.prepareStatement("select * from users where id = ?");
         ps.setString(1,id);
         ResultSet rs = ps.executeQuery();
-        rs.next();
-        User user = new User();
-        user.setId(rs.getString("id"));
-        user.setName(rs.getString("name"));
-        user.setPassword(rs.getString("password"));
+        User user = null;
+        if(rs.next()){
+            user = new User();
+            user.setId(rs.getString("id"));
+            user.setName(rs.getString("name"));
+            user.setPassword(rs.getString("password"));
+        }
         rs.close();
         ps.close();
         c.close();
+        if(user == null){
+            throw new EmptyResultDataAccessException(1);
+        }
         return user;
     }
 //    private  Connection getConnection() throws ClassNotFoundException, SQLException {

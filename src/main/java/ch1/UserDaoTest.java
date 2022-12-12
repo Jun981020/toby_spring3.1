@@ -1,11 +1,9 @@
 package ch1;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+import java.util.stream.Stream;
 
 public class UserDaoTest {
 
@@ -73,7 +71,6 @@ public class UserDaoTest {
 
 
         //jdbc 템플릿
-
 
 
     }

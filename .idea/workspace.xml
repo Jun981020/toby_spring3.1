@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="test code 작성">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/CountingDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/CountingDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDaoConnectionCountingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoConnectionCountingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTestTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -84,49 +82,18 @@
       <recent name="ch1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTestTest">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch1.Test" />
-      <module name="toby_spring3.1.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoConnectionCountingTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoConnectionCountingTest" />
-      <module name="toby_spring3.1.main" />
+  <component name="RunManager" selected="JUnit.UserDaoTest">
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ch1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="ch1" />
       <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
-      <module name="toby_spring3.1.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="myTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch1.myTest" />
-      <module name="toby_spring3.1.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,13 +113,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDaoTest.addAndGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch1" />
+      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
+      <option name="METHOD_NAME" value="addAndGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.getCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch1" />
+      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
+      <option name="METHOD_NAME" value="getCountTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.getUserFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch1" />
+      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
+      <option name="METHOD_NAME" value="getUserFailure" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest" />
+        <item itemvalue="JUnit.UserDaoTest.getUserFailure" />
+        <item itemvalue="JUnit.UserDaoTest.addAndGet" />
+        <item itemvalue="JUnit.UserDaoTest.getCountTest" />
         <item itemvalue="JUnit.UserDaoTestTest" />
-        <item itemvalue="Application.UserDaoConnectionCountingTest" />
-        <item itemvalue="Application.myTest" />
-        <item itemvalue="Application.UserDaoTest" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669982774539</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test code 작성">
+      <created>1670592682350</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670592682350</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
