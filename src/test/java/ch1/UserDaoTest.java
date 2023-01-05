@@ -7,6 +7,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -17,16 +18,18 @@ import static org.assertj.core.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class UserDaoTest {
-    @InjectMocks
-    private UserDao dao;
-    @Mock
-    private ApplicationContext context;
+//    @InjectMocks
+//    private UserDao dao;
+//    @Mock
+//    private ApplicationContext context;
 
+    @Autowired
+    private UserDao dao;
     @BeforeEach
     public void setUp(){
-        System.out.println(this.context);
-        System.out.println(this);
-        this.dao= context.getBean("userDao", UserDao.class);
+//        System.out.println(this.context);
+//        System.out.println(this);
+//        this.dao= context.getBean("userDao", UserDao.class);
     }
 
     @Test

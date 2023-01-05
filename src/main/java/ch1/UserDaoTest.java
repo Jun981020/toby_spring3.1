@@ -1,5 +1,7 @@
 package ch1;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.StringTokenizer;
@@ -69,9 +71,12 @@ public class UserDaoTest {
 //        CountingConnectionMaker ccm = ac.getBean("connectionMarker", CountingConnectionMaker.class);
 //        System.out.println(ccm.getCount());
 
-
-        //jdbc 템플릿
-
+        //템플릿
+        AnnotationConfigApplicationContext ac
+                = new AnnotationConfigApplicationContext(DaoFactory.class);
+        UserDao userDao = ac.getBean("userDao", UserDao.class);
+        int count = userDao.getCount();
+        System.out.println(count);
 
     }
 }

@@ -2,11 +2,22 @@ package ch1;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 
+import javax.sql.DataSource;
 import java.sql.*;
 
-public class UserDao{
+public abstract class UserDao{
+
+    public UserDao(){
+
+    }
 
     private ConnectionMarker connectionMarker;
+
+    private DataSource dataSource;
+
+    public void setDataSource(DataSource dataSource){
+        this.dataSource = dataSource;
+    }
 
     public UserDao(ConnectionMarker connectionMarker) {
         this.connectionMarker = connectionMarker;
@@ -15,22 +26,71 @@ public class UserDao{
 //        this.connectionMarker = connectionMarker;
 //    }
     public int getCount() throws SQLException, ClassNotFoundException {
-        Connection c = connectionMarker.makeConnection();
-        PreparedStatement ps = c.prepareStatement("select count(*) from users");
-        ResultSet rs = ps.executeQuery();
-        rs.next();
-        int count = rs.getInt(1);
-        rs.close();
-        ps.close();
-        c.close();
-        return count;
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            c = dataSource.getConnection();
+            ps = c.prepareStatement("select count(*) from users");
+            rs = ps.executeQuery();
+            rs.next();
+            return rs.getInt(1);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            if(rs != null){
+                try {
+                    rs.close();
+                }catch (SQLException e){
+
+                }
+            }
+            if(ps != null){
+                try {
+                    ps.close();
+                }catch (SQLException e){
+
+                }
+            }
+            if(c != null){
+                try {
+                    c.close();
+                }catch (SQLException e){
+
+                }
+            }
+        }
     }
     
     public void deleteAll() throws SQLException, ClassNotFoundException {
-        Connection c = connectionMarker.makeConnection();
-        PreparedStatement ps = c.prepareStatement("delete from users");
-        ps.executeUpdate();
+        Connection c = null;
+        PreparedStatement ps = null;
+        try{
+            c = dataSource.getConnection();
+            ps = makeStatement(c);
+            ps.executeUpdate();
+        }catch (SQLException e){
+            throw e;
+        }finally {
+            if(ps != null){
+                try{
+                    ps.close();
+                }catch (SQLException e){
+
+                }
+            }
+            if(c != null){
+                try {
+                    c.close();
+                }catch (SQLException e){
+
+                }
+            }
+        }
+
     }
+
+    abstract protected PreparedStatement makeStatement(Connection c) throws SQLException;
 
     public void add(User user) throws ClassNotFoundException, SQLException {
         Connection c = connectionMarker.makeConnection();
@@ -62,11 +122,41 @@ public class UserDao{
         }
         return user;
     }
-//    private  Connection getConnection() throws ClassNotFoundException, SQLException {
-//        Class.forName("com.mysql.cj.jdbc.Driver");
-//        Connection c = DriverManager.getConnection(
-//                "jdbc:mysql://localhost/toby_spring","root","qwer12345"
-//        );
-//        return c;
-//    }
+    public int getConnection() throws  SQLException {
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            c = dataSource.getConnection();
+            ps = c.prepareStatement("select count(*) from users");
+            rs = ps.executeQuery();
+            rs.next();
+            return rs.getInt(1);
+        }catch (SQLException e){
+            throw e;
+        }finally {
+            if(rs != null){
+                try {
+                    rs.close();
+                }catch (SQLException e){
+
+                }
+            }
+            if(ps != null){
+                try{
+                    ps.close();
+                }catch (SQLException e){
+
+                }
+            }
+            if(c != null){
+                try {
+                    c.close();
+                }catch (SQLException e){
+
+                }
+            }
+        }
+    }
 }
