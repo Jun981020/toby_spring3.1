@@ -32,6 +32,7 @@ class UserDaoTest {
 //        this.dao= context.getBean("userDao", UserDao.class);
     }
 
+
     @Test
     public void addAndGet() throws SQLException, ClassNotFoundException {
         AnnotationConfigApplicationContext ac
@@ -88,5 +89,13 @@ class UserDaoTest {
     public static UserDao getBeanM(){
         AnnotationConfigApplicationContext ac = getAc();
         return ac.getBean("userDao",UserDao.class);
+    }
+    @Test
+    public void addJdbc() throws SQLException, ClassNotFoundException {
+        UserDao dao = getBeanM();
+        User user = new User("ad", "spring", "book");
+        dao.add(user);
+        User user1 = dao.get(user.getId());
+        assertThat(user1.getName()).isEqualTo(user.getName());
     }
 }

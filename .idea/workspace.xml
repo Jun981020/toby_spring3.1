@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="테스트 작성">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoDeleteAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="템플릿 메서드 패턴 적용">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/DeleteAllStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/JdbcContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/StatementStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDaoDeleteAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoDeleteAll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +39,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -82,7 +82,7 @@
       <recent name="ch1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserDaoTest">
+  <component name="RunManager" selected="JUnit.UserDaoTest">
     <configuration name="UserDaoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
       <module name="toby_spring3.1.main" />
@@ -127,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.getCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.addJdbc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
         <pattern>
@@ -137,7 +137,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ch1" />
       <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
-      <option name="METHOD_NAME" value="getCountTest" />
+      <option name="METHOD_NAME" value="addJdbc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserDaoTest" />
         <item itemvalue="JUnit.UserDaoTest" />
+        <item itemvalue="JUnit.UserDaoTest.addJdbc" />
+        <item itemvalue="Application.UserDaoTest" />
         <item itemvalue="JUnit.UserDaoTest.getUserFailure" />
         <item itemvalue="JUnit.UserDaoTest.addAndGet" />
-        <item itemvalue="JUnit.UserDaoTest.getCountTest" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670854003301</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="템플릿 메서드 패턴 적용">
+      <created>1672929260847</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672929260847</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +271,8 @@
     <MESSAGE value="p.150 setter 주입,&#10;단위테스트" />
     <MESSAGE value="test code 작성" />
     <MESSAGE value="테스트 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="테스트 작성" />
+    <MESSAGE value="템플릿 메서드 패턴 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="템플릿 메서드 패턴 적용" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
