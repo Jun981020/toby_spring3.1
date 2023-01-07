@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="템플릿 메서드 패턴 적용">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/DeleteAllStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/JdbcContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/StatementStrategy.java" afterDir="false" />
+    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="p.241">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/JdbcContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/JdbcContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDaoDeleteAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDaoDeleteAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672929260847</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="p.241">
+      <created>1673001250588</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673001250588</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,7 +274,8 @@
     <MESSAGE value="test code 작성" />
     <MESSAGE value="테스트 작성" />
     <MESSAGE value="템플릿 메서드 패턴 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="템플릿 메서드 패턴 적용" />
+    <MESSAGE value="p.241" />
+    <option name="LAST_COMMIT_MESSAGE" value="p.241" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
