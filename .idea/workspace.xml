@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="p.241">
+    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="p.258">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/BufferedReaderCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/LineCallBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/numbers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ch1/CalcSumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/static/numbers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/JdbcContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/JdbcContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +40,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,21 +57,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ijunhyeong/IdeaProjects/toby_spring3.1/build.gradle&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/ijunhyeong/IdeaProjects/toby_spring3.1/src/test/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -76,22 +82,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ch1" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch1" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest">
-    <configuration name="UserDaoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
-      <module name="toby_spring3.1.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CalcSumTest">
+    <configuration name="CalcSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +96,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ch1" />
-      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.addAndGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalcSumTest.concatenateStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ch1" />
-      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
-      <option name="METHOD_NAME" value="addAndGet" />
+      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
+      <option name="METHOD_NAME" value="concatenateStrings" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.addJdbc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalcSumTest.fileReader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
         <pattern>
@@ -131,14 +127,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ch1" />
-      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
-      <option name="METHOD_NAME" value="addJdbc" />
+      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
+      <option name="METHOD_NAME" value="fileReader" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.getUserFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalcSumTest.multiplyOfNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +143,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ch1" />
-      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
-      <option name="METHOD_NAME" value="getUserFailure" />
+      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
+      <option name="METHOD_NAME" value="multiplyOfNumbers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcSumTest.sumOfNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch1" />
+      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
+      <option name="METHOD_NAME" value="sumOfNumbers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="JUnit.UserDaoTest.addJdbc" />
-        <item itemvalue="Application.UserDaoTest" />
-        <item itemvalue="JUnit.UserDaoTest.getUserFailure" />
-        <item itemvalue="JUnit.UserDaoTest.addAndGet" />
+        <item itemvalue="JUnit.CalcSumTest" />
+        <item itemvalue="JUnit.CalcSumTest.concatenateStrings" />
+        <item itemvalue="JUnit.CalcSumTest.multiplyOfNumbers" />
+        <item itemvalue="JUnit.CalcSumTest.sumOfNumbers" />
+        <item itemvalue="JUnit.CalcSumTest.fileReader" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673001250588</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="p.258">
+      <created>1673102544480</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673102544480</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +294,8 @@
     <MESSAGE value="테스트 작성" />
     <MESSAGE value="템플릿 메서드 패턴 적용" />
     <MESSAGE value="p.241" />
-    <option name="LAST_COMMIT_MESSAGE" value="p.241" />
+    <MESSAGE value="p.258" />
+    <option name="LAST_COMMIT_MESSAGE" value="p.258" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
