@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="제네릭 템플릿/콜백 패턴 작성">
+    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="jdbcTemplate 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch1/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <recent name="ch1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest">
+  <component name="RunManager" selected="JUnit.UserDaoTest.getAll">
     <configuration name="CalcSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
@@ -130,22 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalcSumTest.sumOfNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="toby_spring3.1.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ch1" />
-      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
-      <option name="METHOD_NAME" value="sumOfNumbers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
@@ -161,13 +146,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDaoTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch1" />
+      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest.getAll" />
         <item itemvalue="JUnit.UserDaoTest" />
         <item itemvalue="JUnit.CalcSumTest" />
         <item itemvalue="JUnit.CalcSumTest.concatenateStrings" />
         <item itemvalue="JUnit.CalcSumTest.multiplyOfNumbers" />
-        <item itemvalue="JUnit.CalcSumTest.sumOfNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673150705421</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="jdbcTemplate 변경">
+      <created>1673275687752</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673275687752</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,7 +306,8 @@
     <MESSAGE value="p.241" />
     <MESSAGE value="p.258" />
     <MESSAGE value="제네릭 템플릿/콜백 패턴 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="제네릭 템플릿/콜백 패턴 작성" />
+    <MESSAGE value="jdbcTemplate 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="jdbcTemplate 변경" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
