@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="p.258">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/BufferedReaderCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch1/LineCallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/numbers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ch1/CalcSumTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/static/numbers.txt" afterDir="false" />
+    <list default="true" id="4cbfb36d-b0a0-474d-a17d-c37e77d100ea" name="Changes" comment="제네릭 템플릿/콜백 패턴 작성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch1/UserDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +54,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/ijunhyeong/IdeaProjects/toby_spring3.1/src/test/resources",
+    "last_opened_file_path": "/Users/ijunhyeong/IdeaProjects/toby_spring3.1/build.gradle",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -86,7 +82,7 @@
       <recent name="ch1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalcSumTest">
+  <component name="RunManager" selected="JUnit.UserDaoTest">
     <configuration name="CalcSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toby_spring3.1.test" />
       <extension name="coverage">
@@ -113,22 +109,6 @@
       <option name="PACKAGE_NAME" value="ch1" />
       <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
       <option name="METHOD_NAME" value="concatenateStrings" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalcSumTest.fileReader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="toby_spring3.1.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ch1" />
-      <option name="MAIN_CLASS_NAME" value="ch1.CalcSumTest" />
-      <option name="METHOD_NAME" value="fileReader" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,13 +146,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="toby_spring3.1.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch1" />
+      <option name="MAIN_CLASS_NAME" value="ch1.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest" />
         <item itemvalue="JUnit.CalcSumTest" />
         <item itemvalue="JUnit.CalcSumTest.concatenateStrings" />
         <item itemvalue="JUnit.CalcSumTest.multiplyOfNumbers" />
         <item itemvalue="JUnit.CalcSumTest.sumOfNumbers" />
-        <item itemvalue="JUnit.CalcSumTest.fileReader" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673102544480</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="제네릭 템플릿/콜백 패턴 작성">
+      <created>1673150705421</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673150705421</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +297,8 @@
     <MESSAGE value="템플릿 메서드 패턴 적용" />
     <MESSAGE value="p.241" />
     <MESSAGE value="p.258" />
-    <option name="LAST_COMMIT_MESSAGE" value="p.258" />
+    <MESSAGE value="제네릭 템플릿/콜백 패턴 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="제네릭 템플릿/콜백 패턴 작성" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
