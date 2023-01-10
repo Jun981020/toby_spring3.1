@@ -104,6 +104,9 @@ class UserDaoTest {
         UserDao dao = getBeanM();
         dao.deleteAll();
 
+        List<User> users0 = dao.getAll();
+        assertThat(users0.size()).isEqualTo(0);
+
         User user1 = new User("userA", "asd", "1234");
         dao.add(user1);
         List<User> users1 = dao.getAll();

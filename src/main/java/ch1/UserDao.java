@@ -13,9 +13,22 @@ import java.util.List;
 
 public class UserDao{
 
-    private JdbcContext jdbcContext;
+    private RowMapper<User> userMapper =
+            new RowMapper<User>() {
+                @Override
+                public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+                    User user = new User();
+                    user.setId(rs.getString("id"));
+                    user.setName(rs.getString("name"));
+                    user.setPassword(rs.getString("password"));
+                    return user;
+                }
+            };
+
+//    private JdbcContext jdbcContext;
 
     private JdbcTemplate jdbcTemplate;
+
 //    public void setJdbcContext(JdbcContext jdbcContext){
 //        this.jdbcContext = jdbcContext;
 //    }
@@ -25,11 +38,8 @@ public class UserDao{
     }
     private ConnectionMarker connectionMarker;
 
-    private DataSource dataSource;
-
     public void setDataSource(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);
-        this.dataSource = dataSource;
     }
 
     public UserDao(ConnectionMarker connectionMarker) {
@@ -92,13 +102,6 @@ public class UserDao{
 //        jdbcContext.executeSql("delete from users");
         this.jdbcTemplate.update("delete from users");
     }
-    private void executeSql(final String query) throws SQLException {
-        jdbcContext.workWithStatementStrategy(c->{
-            return c.prepareStatement(query);
-        });
-    }
-
-//    abstract protected PreparedStatement makeStatement(Connection c) throws SQLException;
 
     public void add(final User user) throws SQLException {
         //inner class
@@ -147,93 +150,38 @@ public class UserDao{
         return this.jdbcTemplate.queryForObject("select * from users where id = ?",
                 new Object[] {id}
                 ,
-                new RowMapper<User>() {
-                    @Override
-                    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                        User user = new User();
-                        user.setId(rs.getString("id"));
-                        user.setName(rs.getString("name"));
-                        user.setPassword(rs.getString("password"));
-                        return user;
-                    }
-                });
-    }
-    public int getConnection() throws  SQLException {
-        Connection c = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        try {
-            c = dataSource.getConnection();
-            ps = c.prepareStatement("select count(*) from users");
-            rs = ps.executeQuery();
-            rs.next();
-            return rs.getInt(1);
-        }catch (SQLException e){
-            throw e;
-        }finally {
-            if(rs != null){
-                try {
-                    rs.close();
-                }catch (SQLException e){
-
-                }
-            }
-            if(ps != null){
-                try{
-                    ps.close();
-                }catch (SQLException e){
-
-                }
-            }
-            if(c != null){
-                try {
-                    c.close();
-                }catch (SQLException e){
-
-                }
-            }
-        }
+                this.userMapper);
     }
     public void jdbcContextWithStatementStrategy(StatementStrategy smt) throws SQLException {
-        Connection c = null;
-        PreparedStatement ps = null;
-        try{
-            c = dataSource.getConnection();
-            ps = smt.makePreparedStatement(c);
-            ps.executeUpdate();
-        }catch(SQLException e){
-            throw e;
-        }finally {
-            if(ps != null){
-                try {
-                    ps.close();
-                }catch (SQLException e){
-
-                }
-            }
-            if(c != null){
-                try {
-                    c.close();
-                }catch (SQLException e){
-
-                }
-            }
-        }
+//        Connection c = null;
+//        PreparedStatement ps = null;
+//        try{
+//            c = dataSource.getConnection();
+//            ps = smt.makePreparedStatement(c);
+//            ps.executeUpdate();
+//        }catch(SQLException e){
+//            throw e;
+//        }finally {
+//            if(ps != null){
+//                try {
+//                    ps.close();
+//                }catch (SQLException e){
+//
+//                }
+//            }
+//            if(c != null){
+//                try {
+//                    c.close();
+//                }catch (SQLException e){
+//
+//                }
+//            }
+//        }
     }
 
     public List<User> getAll() {
         List<User> query = this.jdbcTemplate.query("select * from users order by id",
-                new RowMapper<User>() {
-                    @Override
-                    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                        User user = new User();
-                        user.setId(rs.getString("id"));
-                        user.setName(rs.getString("name"));
-                        user.setPassword(rs.getString("password"));
-                        return user;
-                    }
-                });
+                this.userMapper);
         return query;
     }
 }
